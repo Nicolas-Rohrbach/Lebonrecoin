@@ -8,9 +8,10 @@
 
 require_once 'function.php';
 startpage();
+buildheader();
 
 ?>
-<h1 class="text-center"> Le bon recoin </h1>
+<h1 class="text-center"> Connexion </h1>
 <div align="center">
     <form method="post" action="" id="loginform" name="loginform">
         <br/>
@@ -20,7 +21,6 @@ startpage();
         <input type="password" id="inputPassword" class="form-control text-center modal-sm" name="pwd" required="">
         <br/>
         <button class="btn btn-lg btn-primary btn-block modal-sm" type="submit"> Se connecter </button>
-        <input type="hidden" value="http://tv-connectee-amu.alwaysdata.net/" name="redirect_to">
     </form>
 
     Vous n'avez pas de compte ?
@@ -29,15 +29,31 @@ startpage();
 
 <?php
 
-$link = new PDO('mysql:host=mysql-lebonrecoin.alwaysdata.net; dbname=lebonrecoin_bd', '178440', 'azerty')
-or die('Pb de connexion au serveur: ' . mysqli_connect_error());
+$email = "nico@nico.fr";
+$pwd = "nico";
 
-$stmt = $link->prepare("SELECT * FROM USER WHERE EMAIL = :EMAIL");
-$stmt->bindParam(':EMAIL', $email);
+if (isset($_POST['email'], $_POST['pwd'])) {
 
-// insertion d'une ligne
-$pwd = $_POST['pwd'];
-$email = $_POST['email'];
-$stmt->execute();
+    $link = new PDO('mysql:host=mysql-lebonrecoin.alwaysdata.net; dbname=lebonrecoin_bd', '178440', 'azerty')
+    or die('Pb de connexion au serveur: ' . mysqli_connect_error());
+
+//    $email = $_POST['email'];
+//    $pwd = md5($_POST['pwd']);
+
+//    $stmt = $link->prepare("SELECT * FROM USER WHERE EMAIL = ".$email." AND PASSWORD = ".$pwd);
+//    $count = $stmt->rowCount();
+
+    if ($_POST['email'] == $email && $_POST['pwd'] == $pwd) {
+
+            session_start();
+            $_SESSION['email'] = $_POST['email'];
+            $_SESSION['pwd'] = md5($_POST['pwd']);
+            header('location: index.php');
+    }
+    else {
+
+        header('location: login.php');
+    }
+}
 
 endpage();

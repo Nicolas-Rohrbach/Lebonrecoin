@@ -9,40 +9,45 @@
 require_once 'function.php';
 
 startpage();
+
+buildheader();
+
 ?>
 
 
-    <h1 class="text-center"> Le bon recoin </h1>
+    <h1 class="text-center"> Créez un compte </h1>
 
     <br/>
 
-    <div align="center" class="jumbotron">
-        <form method="post" action="" id="loginform" name="loginform">
+    <div align="center">
+         <div class="jumbotron modal-lg transparent">
+            <form method="post" action="" id="loginform" name="loginform">
 
-            Type de compte *:
-            <label>Particulier
-            <input type="radio" name="radio1" value="particulier" required="">
-            </label>
-            <label>Professionel
-            <input type="radio" name="radio1" value="pro" required="">
-            </label>
+                Type de compte *:
+                <label>Particulier
+                <input type="radio" name="radio1" value="particulier" required="">
+                </label>
+                <label>Professionel
+                <input type="radio" name="radio1" value="pro" required="">
+                </label>
 
-            <br/>
+                <br/>
 
-            <label for="user_login">Pseudo *</label>
-            <input type="text" class="form-control text-center modal-sm" id="user_login" name="log" required="" autofocus="">
+                <label for="user_login">Pseudo *</label>
+                <input type="text" class="form-control text-center modal-sm" id="user_login" name="log" required="" autofocus="">
 
-            <label for="user_pass" >Mot de passe *</label>
-            <input type="password" id="user_pass" class="form-control text-center modal-sm" name="pwd" required="">
+                <label for="user_pass" >Mot de passe *</label>
+                <input type="password" id="user_pass" class="form-control text-center modal-sm" name="pwd" required="">
 
-            <label for="user_email" >Email *</label>
-            <input type="email" id="user_pass" class="form-control text-center modal-sm" name="email" required="">
+                <label for="user_email" >Email *</label>
+                <input type="email" id="user_pass" class="form-control text-center modal-sm" name="email" required="">
 
-            <br/>
-            <button class="btn btn-lg btn-primary btn-block modal-sm" type="submit"> Enregistrer </button>
-            <!--<input type="hidden" value="http://lebonrecoin.alwaysdata.net/" name="redirect_to"> -->
+                <br/>
+                <button class="btn btn-lg btn-primary btn-block modal-sm" type="submit"> Enregistrer </button>
+                <!--<input type="hidden" value="http://lebonrecoin.alwaysdata.net/" name="redirect_to"> -->
 
-        </form>
+            </form>
+         </div>
     </div>
 
 <?php
@@ -57,7 +62,7 @@ $stmt->bindParam(':EMAIL', $email);
 
 // insertion d'une ligne
 $log = $_POST['log'];
-$pwd = $_POST['pwd'];
+$pwd = md5($_POST['pwd']);
 $email = $_POST['email'];
 $stmt->execute();
 
