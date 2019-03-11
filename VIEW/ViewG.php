@@ -6,7 +6,7 @@
  * Time: 14:43
  */
 
-class ViewG
+abstract class ViewG
 {
 
     /**
@@ -26,13 +26,13 @@ class ViewG
 
     <head>
         <script src="../jquery-3.3.1.min.js"></script>
-        <script src="../script.js"></script>
+        <script src="JS/script.js"></script>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>lebonrecoin</title>
-        <link rel="icon" type="image/png" href="../favicon.png" />
+        <link rel="icon" type="image/png" href="../VIEW/Images/favicon.png" />
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <link rel="stylesheet" href="../style.css">
+        <link rel="stylesheet" href="../VIEW/CSS/style.css">
     ';
     }
 
@@ -62,6 +62,11 @@ class ViewG
             echo '
                     <li class="nav-item active" >
                         <a class="nav-link" href = "../disconected.php" > Se déconnecter </a>
+                    </li > ';
+        }
+        else {
+            echo '<li class="nav-item active" >
+                        <a class="nav-link" href = "/login.php" > Se connecter </a>
                     </li > ';
         }
 
@@ -111,25 +116,6 @@ class ViewG
             </form>
          </div>
     </div>';
-    }
-
-    public function displayLogin() {
-        echo '<h1 class="text-center"> Connexion </h1>
-<div align="center">
-    <form method="post" action="" id="loginform" name="loginform">
-        <br/>
-        <label for="user_email">Adresse email</label>
-        <input type="email" class="form-control text-center modal-sm" id="user_email" name="email" required="" autofocus="">
-        <label for="user_pass">Mot de passe </label>
-        <input type="password" id="inputPassword" class="form-control text-center modal-sm" name="pwd" required="">
-        <br/>
-        <button class="btn btn-lg btn-primary btn-block modal-sm" type="submit"> Se connecter </button>
-    </form>
-
-    Vous n\'avez pas de compte ?
-    <a href="register.php"> Inscription <a/>
-</div>
-';
     }
 
     public function endpage() {
