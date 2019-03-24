@@ -1,44 +1,39 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: r17000292
- * Date: 27/02/19
- * Time: 09:20
- */
+
+session_start();
+
+include_once 'CONTROLLER/ControllerG.php';
+include_once 'VIEW/ViewG.php';
+
+// /Admin/index/tot/1
+
+$url = filter_input(INPUT_GET, 'url');
+if (empty($url)) {
+    $url = 'home';
+}
+$urlExpl = explode('/', $url);
+// $urlExpl[0] => nom du controller
+// $urlExpl[1] => nom de l'action du controller
+
+$controllerfile = 'CONTROLLER/' . $urlExpl[0] . '.php';
+if (file_exists($controllerfile)) {
+    include_once $controllerfile;
+    if (class_exists($urlExpl[0])) {
+        $ctrl = new $urlExpl[0]();
+        if ($ctrl instanceof ControllerG) {
+            $action = 'display';
+            if (isset($urlExpl[1])) {
+                $action = $urlExpl[1];
+            }
+            if (method_exists($ctrl, $action)) {
+                $ctrl->$action(array_slice($urlExpl, 2));
+                exit;
+            }
+        }
+    }
+}
 
 
-require_once 'CONTROLLER/ControllerG.php';
-
-$controller = new ControllerG();
-$controller->displayIndex();
-?>
-
-<!--<script>-->
-<!---->
-<!--    $(document).ready(function(){-->
-<!--        console.log("debut");-->
-<!--        $.ajax({-->
-<!--            url: '/is_connected.php'-->
-<!--        }).done(function(data) {-->
-<!--            if(data === false) {-->
-<!--                location.href = '/login.php';-->
-<!--                console.log("Non connecté")-->
-<!--            }-->
-<!--            else {-->
-<!--                $('<div />').append('oui');-->
-<!--                console.log("Connecté")-->
-<!--            }-->
-<!--        })-->
-<!--    });-->
-<!---->
-<!--</script>-->
-
-<?php
 
 
-echo '<div class="text-center"> Lebonrecoin est le site référent de petites annonces de particulier à particulier et professionnels en France. 
-    Découvrez nos annonces voitures d’occasion, motos, immobilier, emploi, location de vacances, vêtements, électroménager, jouets, déco, meubles, etc... 
-    Déposez une annonce gratuite en toute simplicité pour vendre, donner vos biens ou promouvoir vos services. 
-    Avec des milliers de nouvelles annonces mises en ligne chaque jour vous trouverez l’objet d’occasion ou neuf que vous désirez. </div>';
 
-endpage();

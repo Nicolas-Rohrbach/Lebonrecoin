@@ -6,26 +6,8 @@
  * Time: 14:48
  */
 
-include "../VIEW/ViewG.php";
-include "../MODEL/BD.php";
-
-class ControllerG
+interface ControllerG
 {
-    private $bd;
-    private $viewG;
+    public function display($data = []);
 
-    /**
-     * ControllerG constructor.
-     */
-    public function __construct()
-    {
-        $this->bd = new BD();
-        $this->viewG = new ViewG();
-    }
-
-    public function displayIndex() {
-        $this->viewG->startpage();
-        $this->viewG->buildheader();
-        $this->viewG->endpage();
-    }
 }
