@@ -6,9 +6,9 @@
  * Time: 20:08
  */
 
-include_once 'VIEW/viewRegister.php';
+include_once 'views/ViewRegister.php';
 
-class register implements ControllerG
+class Register implements ControllerG
 {
     public function display($data = [])
     {

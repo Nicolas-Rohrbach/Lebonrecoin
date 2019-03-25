@@ -2,20 +2,23 @@
 
 session_start();
 
-include_once 'CONTROLLER/ControllerG.php';
-include_once 'VIEW/ViewG.php';
+include_once 'controllers/ControllerG.php';
+include_once 'views/ViewG.php';
+include_once 'views/Javascript/Function/connexion.php';
 
 // /Admin/index/tot/1
 
 $url = filter_input(INPUT_GET, 'url');
+
 if (empty($url)) {
-    $url = 'home';
+    $url = 'Home';
 }
+
 $urlExpl = explode('/', $url);
 // $urlExpl[0] => nom du controller
 // $urlExpl[1] => nom de l'action du controller
 
-$controllerfile = 'CONTROLLER/' . $urlExpl[0] . '.php';
+$controllerfile = 'controllers/' . $urlExpl[0] . '.php';
 if (file_exists($controllerfile)) {
     include_once $controllerfile;
     if (class_exists($urlExpl[0])) {
@@ -32,7 +35,6 @@ if (file_exists($controllerfile)) {
         }
     }
 }
-
 
 
 

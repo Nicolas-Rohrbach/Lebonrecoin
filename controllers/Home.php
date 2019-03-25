@@ -6,15 +6,16 @@
  * Time: 16:21
  */
 
-include_once 'VIEW/viewHome.php';
+include_once 'views/ViewHome.php';
 
-class home implements ControllerG
+class Home implements ControllerG
 {
 
     public function display($data = []) {
 
         $view = new viewHome();
         $view->startpage('Accueil');
+        $view->displayFrance();
         $view->textIndex();
         $view->endpage();
 

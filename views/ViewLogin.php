@@ -23,7 +23,7 @@ class viewLogin extends ViewG
                     </form>
                 
                     Vous n\'avez pas de compte ?
-                    <a href="/register"> Inscription <a/>
+                    <a href="/controllerRegister"> Inscription <a/>
                 </div>
 ';
     }
