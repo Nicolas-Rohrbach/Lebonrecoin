@@ -31,4 +31,35 @@ abstract class Model
         return $var;
         $req->closeCursor();
     }
+
+    protected function getNumberOfTuple($login, $pwd) {
+        $var = 0;
+        $req = $this->getBdd()->prepare('SELECT * FROM USER WHERE LOGIN =:login AND PASSWORD =:pass');
+        $req->bindValue(':login',$login);
+        $req->bindValue(':pass',$pwd);
+        $req->execute();
+        while($data = $req->fetch(PDO::FETCH_ASSOC)) {
+            $var = $var + 1;
+        }
+        return $var;
+        $req->closeCursor();
+    }
+
+    protected function verifyNoDouble($email, $login) {
+        $var = 0;
+        $req = $this->getBdd()->prepare('SELECT * FROM USER WHERE EMAIL =:mail OR LOGIN =:login');
+        $req->bindValue(':mail',$email);
+        $req->bindValue(':login',$login);
+        $req->execute();
+        while($data = $req->fetch(PDO::FETCH_ASSOC)) {
+            $var = $var + 1;
+        }
+        if($var > 0) {
+            return false;
+        }
+        else {
+            return true;
+        }
+        $req->closeCursor();
+    }
 }

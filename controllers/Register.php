@@ -20,7 +20,7 @@ class Register implements ControllerG
 }
 
 //$link = new PDO('mysql:host=mysql-lebonrecoin.alwaysdata.net; dbname=lebonrecoin_bd', '178440', 'azerty')
-//or die('Pb de connexion au serveur: ' . mysqli_connect_error());
+//or die('Pb de formConnexion au serveur: ' . mysqli_connect_error());
 //
 //$stmt = $link->prepare("INSERT INTO USER (LOGIN, PASSWORD, EMAIL) VALUES (:LOGIN, :PASSWORD, :EMAIL)");
 //$stmt->bindParam(':LOGIN', $log);

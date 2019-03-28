@@ -17,7 +17,7 @@ class viewHome extends ViewG
 
     public function displayFrance() {
         echo '<div class="text-center">
-                <img class="img-thumbnail" alt="France" src="views/Images/France.jpg"/>
+                <img class="img-thumbnail" alt="France" src="views/images/France.jpg"/>
               </div>';
     }
 }

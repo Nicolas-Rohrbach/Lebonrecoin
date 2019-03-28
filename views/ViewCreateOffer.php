@@ -27,17 +27,6 @@ class viewCreateOffer extends ViewG
                   <option>Autres</option>
                 </select>
                 <br/>
-                <div> Vous êtes *
-                <br/>
-                    <div class="form-check form-check-inline">
-                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="1" required="">
-                      <label class="form-check-label" for="inlineRadio1"> Particulier </label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="2" required="">
-                      <label class="form-check-label" for="inlineRadio2"> Professionel </label>
-                    </div>
-                </div>
                 <br/>
                 <div> Type d\'annonce *
                     <br/>

@@ -3,8 +3,10 @@
 session_start();
 
 include_once 'controllers/ControllerG.php';
+include_once 'models/Model.php';
 include_once 'views/ViewG.php';
-include_once 'views/Javascript/Function/connexion.php';
+include_once 'views/javascript/function/connexion.php';
+
 
 // /Admin/index/tot/1
 
