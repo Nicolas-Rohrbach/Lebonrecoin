@@ -62,4 +62,14 @@ abstract class Model
         }
         $req->closeCursor();
     }
+
+    protected function addUser($email, $login, $pwd) {
+        $req = $this->getBdd()->prepare('INSERT INTO USER (LOGIN, PASSWORD, EMAIL) VALUES (:login, :pwd, :email)');
+        $req->bindParam(':email', $email);
+        $req->bindParam(':login', $login);
+        // $req->bindParam(':type', $type);
+        $req->bindParam(':pwd', $pwd);
+
+        $req->execute();
+    }
 }

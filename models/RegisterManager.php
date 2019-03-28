@@ -12,13 +12,7 @@ class RegisterManager extends Model
         return $this->verifyNoDouble($email, $login);
     }
 
-    public function addUser($email, $login, $type, $pwd) {
-        $req = $this->getBdd()->prepare("INSERT INTO USER (LOGIN, PASSWORD, EMAIL, TYPE) VALUES (:email, :pwd, :email, :type)");
-        $req->bindParam(':email', $email);
-        $req->bindParam(':login', $login);
-        $req->bindParam(':type', $type);
-        $req->bindParam(':pwd', $pwd);
-
-        $req->execute();
+    public function add($email, $login, $pwd) {
+        $this->addUser($email, $login, $pwd);
     }
 }

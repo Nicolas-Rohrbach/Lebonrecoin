@@ -1,12 +1,14 @@
-let formRegister = function() {
+function echoFormRegister() {
+
+    clear();
 
     let modal = $('<div >', {class: 'modal', id: 'myModal'}).appendTo('body');
     let modal2 = $('<div >', {class: 'modal-content'}).appendTo(modal);
     let modal3 = $('<div >', {class: 'modal-body'}).appendTo(modal2);
 
-    let titre = $('<h1 >', {class: 'text-center font-weight-bold', text: 'Inscription'}).appendTo(modal3);
+    $('<h1 >', {class: 'text-center font-weight-bold', text: 'Inscription'}).appendTo(modal3);
     let div = $('<div >', {align: 'center'}).appendTo(modal3);
-    let form = $('<form >', {method: 'post', action: '', id: 'registerform'}).appendTo(div);
+    let form = $('<form >', {method: 'post', action: 'register.php', id: 'registerform'}).appendTo(div);
 
 
 
@@ -28,8 +30,8 @@ let formRegister = function() {
     $('<input >', {
         type: 'email',
         class: 'form-control text-center modal-sm',
-        id: 'user_mail',
-        name: 'user_mail'
+        id: 'user_email',
+        name: 'user_email'
     }).appendTo(form);
 
     $('<label >', {for: 'user_pwd', text: 'Mot de passe'}).appendTo(form);
@@ -45,5 +47,14 @@ let formRegister = function() {
         type: 'submit',
         text: 'S\'inscrire'
     }).appendTo(form);
+
+    $('<button >', {
+        class: 'btn btn-lg btn-primary btn-block modal-sm',
+        type: 'submit',
+        text: 'Déjà inscrit ?',
+        onclick: 'formConnexion()'
+    }).appendTo(div);
+
+    $('#myModal').show();
 
 };

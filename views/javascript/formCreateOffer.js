@@ -4,7 +4,7 @@ function createOffer() {
 
     let div = $('<div >', {align: 'center'}).appendTo('body');
 
-    let form = $('<form >', {method: 'post', action: '""', id: 'createofferform'}).appendTo(div);
+    let form = $('<form >', {method: 'post', action: 'createOffer.php', id: 'createofferform'}).appendTo(div);
 
     $('<label >', {text: 'Catégorie *'}).appendTo(form);
     let select = $('<select >', {

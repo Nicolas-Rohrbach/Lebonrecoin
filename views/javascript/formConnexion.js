@@ -1,4 +1,6 @@
-let formConnexion = function() {
+function formConnexion() {
+
+    clear();
 
     let modal = $('<div >', {class: 'modal', id: 'myModal'}).appendTo('body');
     let modal2 = $('<div >', {class: 'modal-content'}).appendTo(modal);
@@ -6,7 +8,7 @@ let formConnexion = function() {
 
     $('<h1 >', {class: 'text-center font-weight-bold', text: 'Connexion'}).appendTo(modal3);
     let div = $('<div >', {align: 'center'}).appendTo(modal3);
-    let form = $('<form >', {method: 'post', action: '', id: 'loginform'}).appendTo(div);
+    let form = $('<form >', {method: 'post', action: 'connexion.php', id: 'loginform'}).appendTo(div);
 
     $('<label >', {for: 'user_login', text: 'Pseudo'}).appendTo(form);
     $('<input >', {
@@ -28,9 +30,10 @@ let formConnexion = function() {
         text: 'Se connecter'
     }).appendTo(form);
     $('<button >', {
-        href: '/Register',
         text: 'S\'inscrire',
-        onclick: 'echoForm'
-    }).appendTo(form);
+        onclick: 'echoFormRegister()'
+    }).appendTo(div);
+
+    $('#myModal').show();
 
 };

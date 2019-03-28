@@ -1,14 +1,13 @@
 function clear() {
 
-    document.body.innerHTML='';
+    $('body').empty();
     displayNavBar();
 
 }
 
 function displayNavBar() {
 
-    let br = $('<br >');
-    let header = $('<header >').append(br).appendTo('body').append(br);
+    let header = $('<header >').appendTo('body').append('<br/>').append('<br/>').append('<br/>');
     let nav = $('<nav >', {class: 'navbar navbar-expand-md navbar-dark fixed-top orange'}).appendTo(header);
 
     let div = $('<div >', {class: 'collapse navbar-collapse', id: 'navbarCollapse'}).appendTo(nav);
@@ -51,7 +50,6 @@ $(document).ready(function(){
         success:(function(data) {
             if(data === false) {
                 formConnexion();
-                $('#myModal').show();
                 console.log("Non connecté")
             }
             else {

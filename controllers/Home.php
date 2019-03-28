@@ -15,6 +15,9 @@ class Home implements ControllerG
 
         $view = new viewHome();
         $view->startpage('Accueil');
+        $view->br();
+        $view->br();
+        $view->br();
         $view->displayFrance();
         $view->textIndex();
         $view->endpage();
