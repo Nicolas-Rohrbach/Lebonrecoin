@@ -31,14 +31,23 @@ function displayNavBar() {
         text: 'Déposer une offre'
     }).appendTo(li2);
 
-    let li3 = $('<li >', {
+    let li3 = $('<li >', {class: 'nav-item active'}).appendTo(ul);
+    $('<button >', {
+        class: 'btn btn-sm btn-outline-secondary',
+        type:'button',
+        id:'viewOffers',
+        onclick:'viewOffers()',
+        text: 'Voir les offres'
+    }).appendTo(li3);
+
+    let li4 = $('<li >', {
         class:'nav-item active'
     }).appendTo(ul);
     $('<a >', {
         class:'nav-link',
         href:'/views/javascript/function/disconected.php',
         text: 'Déconnexion'
-    }).appendTo(li3);
+    }).appendTo(li4);
 
 }
 

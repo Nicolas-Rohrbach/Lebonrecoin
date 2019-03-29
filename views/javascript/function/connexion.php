@@ -16,8 +16,9 @@ if( isset($_POST['user_login']) && isset($_POST['user_pass']) ){
     $pwd = md5($_POST['user_pass']);
 
     if($model->getConnexion($login,$pwd) > 0){
+
         session_start();
         $_SESSION['login'] = $login;
+
     }
-    header('location: https://lebonrecoin.alwaysdata.net');
 }

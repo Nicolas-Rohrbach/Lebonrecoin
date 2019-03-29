@@ -2,6 +2,8 @@ function createOffer() {
 
     clear();
 
+    var mybr = document.createElement('br');
+
     let div = $('<div >', {align: 'center'}).appendTo('body');
 
     let form = $('<form >', {method: 'post', action: 'createOffer.php', id: 'createofferform'}).appendTo(div);
@@ -17,9 +19,11 @@ function createOffer() {
 
     let divAnnonce = $('<div >', {text: 'Type d\'annonce * '});
 
-    let divRadio1 = $('<div >', {class: 'form-check form-check-inline'}).appendTo(divAnnonce);
+    let divRadio1 = $('<div >', {class: 'form-check form-check-inline'}).appendTo(form);
 
-    $('<label >', {for: 'inlineRadio1', text: 'Offres'}).appendTo(divRadio1);
+    //$("<br />").appendTo(form);
+
+    $('<label >', {for: 'inlineRadio1', text: 'Offres '}).appendTo(divRadio1);
     $('<input >', {
         type: 'radio',
         class: 'form-check-input',
@@ -30,7 +34,7 @@ function createOffer() {
 
     let divRadio2 = $('<div >', {class: 'form-check form-check-inline'}).appendTo(form);
 
-    $('<label >', {for: 'inlineRadio1', text: 'Demandes'}).appendTo(divRadio2);
+    $('<label >', {for: 'inlineRadio1', text: 'Demandes '}).appendTo(divRadio2);
     $('<input >', {
         type: 'radio',
         class: 'form-check-input',
@@ -39,6 +43,8 @@ function createOffer() {
         value: 'Demandes'
     }).appendTo(divRadio2);
 
+    $("<br />").appendTo(form);
+
     $('<label >', {text: 'Titre d\'annonce'}).appendTo(form);
     $('<input >', {
         type: 'text',
@@ -46,6 +52,8 @@ function createOffer() {
         id: 'title',
         name: 'title'
     }).appendTo(form);
+
+    $("<br />");
 
     $('<label >', {text: 'Texte de l\'annonce'}).appendTo(form);
     $('<input >', {
@@ -58,7 +66,8 @@ function createOffer() {
     $('<button >', {
         class: 'btn btn-lg btn-primary btn-block modal-sm',
         type: 'submit',
-        text: 'Poster'
+        text: 'Poster',
+        onclick:'verifCreateOffer()'
     }).appendTo(form);
     $('<input >', {
         type: 'hidden',
@@ -67,3 +76,18 @@ function createOffer() {
     }).appendTo(form);
 
 };
+
+function verifCreateOffer() {
+    $.ajax({
+        url: 'views/javascript/function/createOffer.php',
+        success: (function (data) {
+            if (data === false) {
+                alert("Non");
+                console.log("Non connecté")
+            } else {
+                alert("oui");
+                console.log("Connecté")
+            }
+        })
+    });
+}

@@ -21,8 +21,4 @@ if( isset($_POST['user_email']) && isset($_POST['user_pwd']) && isset($_POST['us
 //    if($model->checkNoDouble($email,$login)){ // Si les infos correspondent...
 //        $model->addUser($email,$login,$pwd);
 //    }
-    header('location: https://lebonrecoin.alwaysdata.net');
-}
-else {
-    header('location: https://lebonrecoin.alwaysdata.net');
 }

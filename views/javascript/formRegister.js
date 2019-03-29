@@ -8,7 +8,7 @@ function echoFormRegister() {
 
     $('<h1 >', {class: 'text-center font-weight-bold', text: 'Inscription'}).appendTo(modal3);
     let div = $('<div >', {align: 'center'}).appendTo(modal3);
-    let form = $('<form >', {method: 'post', action: 'register.php', id: 'registerform'}).appendTo(div);
+    let form = $('<form >', {method: 'post', action: '', id: 'registerform'}).appendTo(div);
 
 
 
@@ -58,3 +58,18 @@ function echoFormRegister() {
     $('#myModal').show();
 
 };
+
+function verifRegister() {
+    $.ajax({
+        url: 'views/javascript/function/register.php',
+        success: (function (data) {
+            if (data === false) {
+                alert("Non");
+                console.log("Non connecté")
+            } else {
+                alert("oui");
+                console.log("Connecté")
+            }
+        })
+    });
+}

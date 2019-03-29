@@ -8,7 +8,7 @@ function formConnexion() {
 
     $('<h1 >', {class: 'text-center font-weight-bold', text: 'Connexion'}).appendTo(modal3);
     let div = $('<div >', {align: 'center'}).appendTo(modal3);
-    let form = $('<form >', {method: 'post', action: 'connexion.php', id: 'loginform'}).appendTo(div);
+    let form = $('<form >', {method: 'post', id: 'loginform'}).appendTo(div);
 
     $('<label >', {for: 'user_login', text: 'Pseudo'}).appendTo(form);
     $('<input >', {
@@ -36,4 +36,20 @@ function formConnexion() {
 
     $('#myModal').show();
 
-};
+}
+
+$(document).ready(function() {
+    $("#loginform").submit(function (data){
+        $.ajax({
+            url: $(this).attr("action"),
+            type: $(this).attr("method"),
+            data: $(this).serialize(),
+        }).done(function(result) {
+            if(result === 2){
+                $("#myModal").remove();
+                location.reload();
+            }
+        });
+        return false;
+    });
+});
