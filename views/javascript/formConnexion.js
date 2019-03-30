@@ -8,7 +8,7 @@ function formConnexion() {
 
     $('<h1 >', {class: 'text-center font-weight-bold', text: 'Connexion'}).appendTo(modal3);
     let div = $('<div >', {align: 'center'}).appendTo(modal3);
-    let form = $('<form >', {method: 'post', action: 'connexion.php', id: 'loginform'}).appendTo(div);
+    let form = $('<form >', {method: 'post', id: 'loginform'}).appendTo(div);
 
     $('<label >', {for: 'user_login', text: 'Pseudo'}).appendTo(form);
     $('<input >', {
@@ -17,6 +17,7 @@ function formConnexion() {
         id: 'user_login',
         name: 'user_login'
     }).appendTo(form);
+
     $('<label >', {for: 'user_pass', text: 'Mot de passe'}).appendTo(form);
     $('<input >', {
         type: 'password',
@@ -24,16 +25,43 @@ function formConnexion() {
         id: 'user_pass',
         name: 'user_pass'
     }).appendTo(form);
+
+    $("<br />").appendTo(form);
+
     $('<button >', {
         class: 'btn btn-lg btn-primary btn-block modal-sm',
         type: 'submit',
         text: 'Se connecter'
     }).appendTo(form);
+
+    $("<br />").appendTo(form);
+
     $('<button >', {
-        text: 'S\'inscrire',
+        class: 'btn btn-lg btn-primary btn-block modal-sm',
+        text: 'Inscription',
         onclick: 'echoFormRegister()'
     }).appendTo(div);
 
     $('#myModal').show();
 
-};
+    $(document).ready(function() {
+        $("#loginform").submit(function (data){
+            $.ajax({
+                url: 'views/javascript/function/connexion.php',
+                type: 'post',
+                data: $(this).serialize(),
+            }).done(function(result) {
+                if(result == true) {
+                    $('#myModal').hide();
+                    echoHome();
+                }
+                else {
+                    alert("non");
+                }
+
+            });
+            return false;
+        });
+    });
+
+}

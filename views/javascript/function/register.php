@@ -6,23 +6,23 @@
  * Time: 17:05
  */
 
-require_once "models/RegisterManager.php";
+include_once '../../../models/Model.php';
+require_once "../../../models/RegisterManager.php";
 
-if( isset($_POST['user_email']) && isset($_POST['user_pwd']) && isset($_POST['user_log']) ){
+if( isset($_POST['user_email']) && isset($_POST['user_pwd']) && isset($_POST['user_log']) && isset($_POST['typeAnn']) ){
 
     $model = new RegisterManager();
 
     $login = $_POST['user_log'];
-    $email = $_POST['user_mail'];
+    $email = $_POST['user_email'];
     $pwd = md5($_POST['user_pwd']);
+    $type = $_POST['typeAnn'];
 
-    $model->add($email,$login,$pwd);
+    if($model->checkNoDouble($email,$login)){ // Si les infos correspondent...
+        $model->add($email,$login,$pwd,$type);
+    }
+}
 
-//    if($model->checkNoDouble($email,$login)){ // Si les infos correspondent...
-//        $model->addUser($email,$login,$pwd);
-//    }
-    header('location: https://lebonrecoin.alwaysdata.net');
-}
-else {
-    header('location: https://lebonrecoin.alwaysdata.net');
-}
+$param = json_decode(isset($_POST['user_email']) && isset($_POST['user_pwd']) && isset($_POST['user_log']) && isset($_POST['typeAnn']));
+
+echo $param;

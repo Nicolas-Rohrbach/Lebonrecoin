@@ -12,10 +12,12 @@ class OffreManager extends Model
         return $this->getAll('OFFRE','Offre');
     }
 
-    public function  addOffer($title,$text) {
-        $req = $this->getBdd()->prepare('INSERT INTO OFFRE (TITLE, CONTENT) VALUES (:title, :text)');
+    public function  addOffer($title,$text,$typeOff,$categorie) {
+        $req = $this->getBdd()->prepare('INSERT INTO OFFRE (TITLE, CONTENT, TYPE, CATEGORIE) VALUES (:title, :text, :type, :categorie)');
         $req->bindValue(':title',$title);
         $req->bindValue(':text',$text);
+        $req->bindValue(':type',$typeOff);
+        $req->bindValue(':categorie',$categorie);
         $req->execute();
     }
 }

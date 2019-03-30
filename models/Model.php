@@ -10,65 +10,71 @@ abstract class Model
 {
     private static $bdd;
 
-    private static function setBdd() {
+    private static function setBdd()
+    {
         self::$bdd = new PDO('mysql:host=mysql-lebonrecoin.alwaysdata.net; dbname=lebonrecoin_bd', '178440', '1234');
-        self::$bdd->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_WARNING);
+        self::$bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
     }
 
-    protected function getBdd() {
+    protected function getBdd()
+    {
         if (self:: $bdd == null)
             self::setBdd();
         return self::$bdd;
     }
 
-    protected function getAll($table, $obj) {
+    protected function getAll($table, $obj)
+    {
         $var = [];
-        $req = $this->getBdd()->prepare('SELECT * FROM '.$table.' ORDER BY id desc');
+        $req = $this->getBdd()->prepare('SELECT * FROM ' . $table . ' ORDER BY id desc');
         $req->execute();
-        while($data = $req->fetch(PDO::FETCH_ASSOC)) {
+        while ($data = $req->fetch(PDO::FETCH_ASSOC)) {
             $var[] = new $obj($data);
         }
         return $var;
         $req->closeCursor();
     }
 
-    protected function getNumberOfTuple($login, $pwd) {
+    protected function getNumberOfTuple($login, $pwd)
+    {
         $var = 0;
         $req = $this->getBdd()->prepare('SELECT * FROM USER WHERE LOGIN =:login AND PASSWORD =:pass');
-        $req->bindValue(':login',$login);
-        $req->bindValue(':pass',$pwd);
+        $req->bindValue(':login', $login);
+        $req->bindValue(':pass', $pwd);
         $req->execute();
-        while($data = $req->fetch(PDO::FETCH_ASSOC)) {
+        while ($data = $req->fetch(PDO::FETCH_ASSOC)) {
             $var = $var + 1;
         }
         return $var;
         $req->closeCursor();
     }
 
-    protected function verifyNoDouble($email, $login) {
+    protected function verifyNoDouble($email, $login)
+    {
         $var = 0;
         $req = $this->getBdd()->prepare('SELECT * FROM USER WHERE EMAIL =:mail OR LOGIN =:login');
-        $req->bindValue(':mail',$email);
-        $req->bindValue(':login',$login);
+        $req->bindValue(':mail', $email);
+        $req->bindValue(':login', $login);
         $req->execute();
-        while($data = $req->fetch(PDO::FETCH_ASSOC)) {
+        while ($data = $req->fetch(PDO::FETCH_ASSOC)) {
             $var = $var + 1;
         }
-        if($var > 0) {
+        if ($var > 0) {
             return false;
-        }
-        else {
+        } else {
             return true;
         }
         $req->closeCursor();
     }
 
-    protected function addUser($email, $login, $pwd) {
-        $req = $this->getBdd()->prepare('INSERT INTO USER (LOGIN, PASSWORD, EMAIL) VALUES (:login, :pwd, :email)');
-        $req->bindParam(':email', $email);
+    protected function addUser($email, $login, $pwd, $type)
+    {
+        $req = $this->getBdd()->prepare('INSERT INTO USER (LOGIN, PASSWORD, EMAIL, TYPE) VALUES (:login, :pwd, :email, :type)');
+
         $req->bindParam(':login', $login);
-        // $req->bindParam(':type', $type);
+        $req->bindParam(':email', $email);
         $req->bindParam(':pwd', $pwd);
+        $req->bindParam(':type', $type);
 
         $req->execute();
     }

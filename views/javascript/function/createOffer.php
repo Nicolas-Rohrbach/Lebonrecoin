@@ -6,15 +6,21 @@
  * Time: 14:32
  */
 
-include_once "models/OffreManager.php";
+include_once '../../../models/Model.php';
+include_once "../../../models/OffreManager.php";
 
-if( isset($_POST['title']) && isset($_POST['text']) ){
+if( isset($_POST['title']) && isset($_POST['text']) && isset($_POST['typeOff']) && isset($_POST['categorie'])){
 
     $model = new OffreManager();
 
     $title = $_POST['title'];
     $text = $_POST['text'];
-    $model->addOffer($title,$text);
+    $typeOff = $_POST['typeOff'];
+    $categorie = $_POST['categorie'];
+    $model->addOffer($title,$text,$typeOff,$categorie);
 
-    header('location: https://lebonrecoin.alwaysdata.net');
 }
+
+$param = json_decode(isset($_POST['title']) && isset($_POST['text']) && isset($_POST['typeOff']) && isset($_POST['categorie']));
+
+echo $param;

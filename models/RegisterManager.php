@@ -12,7 +12,7 @@ class RegisterManager extends Model
         return $this->verifyNoDouble($email, $login);
     }
 
-    public function add($email, $login, $pwd) {
-        $this->addUser($email, $login, $pwd);
+    public function add($email, $login, $pwd, $type) {
+        $this->addUser($email, $login, $pwd, $type);
     }
 }

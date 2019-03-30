@@ -14,7 +14,7 @@ class Home implements ControllerG
     public function display($data = []) {
 
         $view = new viewHome();
-        $view->startpage('Accueil');
+        $view->startpage('Lebonrecoin');
         $view->br();
         $view->br();
         $view->br();

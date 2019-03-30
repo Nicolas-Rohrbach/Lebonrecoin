@@ -8,15 +8,18 @@ function echoFormRegister() {
 
     $('<h1 >', {class: 'text-center font-weight-bold', text: 'Inscription'}).appendTo(modal3);
     let div = $('<div >', {align: 'center'}).appendTo(modal3);
-    let form = $('<form >', {method: 'post', action: 'register.php', id: 'registerform'}).appendTo(div);
+    let form = $('<form >', {method: 'post', id: 'registerform'}).appendTo(div);
 
 
 
     let label1 = $('<label >', { text:'Particulier' }).appendTo(form);
-    $('<input >', { type:'radio', value:'particulier'}).appendTo(label1);
+    $('<input >', { type:'radio', value:'particulier', name:'typeAnn', id:'typeAnn'}).appendTo(label1);
 
     let label2 = $('<label >', { text:'Professionel' }).appendTo(form);
-    $('<input >', { type:'radio', value:'progessionel'}).appendTo(label2);
+
+    $("<br />").appendTo(form);
+
+    $('<input >', { type:'radio', value:'professionel', name:'typeAnn', id:'typeAnn'}).appendTo(label2);
 
     $('<label >', {for: 'user_log', text: 'Pseudo'}).appendTo(form);
     $('<input >', {
@@ -42,11 +45,16 @@ function echoFormRegister() {
         name: 'user_pwd'
     }).appendTo(form);
 
+    $("<br />").appendTo(form);
+
     $('<button >', {
         class: 'btn btn-lg btn-primary btn-block modal-sm',
         type: 'submit',
+        id:'regist',
         text: 'S\'inscrire'
     }).appendTo(form);
+
+    $("<br />").appendTo(form);
 
     $('<button >', {
         class: 'btn btn-lg btn-primary btn-block modal-sm',
@@ -56,5 +64,24 @@ function echoFormRegister() {
     }).appendTo(div);
 
     $('#myModal').show();
+
+    $(document).ready(function() {
+        $("#registerform").submit(function (data){
+            $.ajax({
+                url: 'views/javascript/function/register.php',
+                type: 'post',
+                data: $(this).serialize(),
+            }).done(function(result) {
+                if(result == true) {
+                    formConnexion();
+                }
+                else {
+                    alert(result);
+                }
+
+            });
+            return false;
+        });
+    });
 
 };

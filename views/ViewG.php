@@ -29,7 +29,7 @@ abstract class ViewG
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-        <script src="views/javascript/menu.js"></script>
+        <script src="views/javascript/viewNavbar.js"></script>
         <script src="views/javascript/views.js"></script>
     </head>
     <body>';
@@ -38,6 +38,8 @@ abstract class ViewG
 
     public function endpage() {
         echo '
+    <script src="views/javascript/viewHome.js"></script>
+    <script src="views/javascript/viewOffers.js"></script>
     <script src="views/javascript/formCreateOffer.js"></script>
     <script src="views/javascript/formConnexion.js"></script>
     <script src="views/javascript/formRegister.js"></script>

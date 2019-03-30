@@ -44,10 +44,6 @@ class Offre
             $this->content = $content;
     }
 
-    public function  setDate($date) {
-        $this->date = $date;
-    }
-
     //GETTERS
     public function id() {
         return $this->id;
@@ -60,10 +56,5 @@ class Offre
     public function content() {
         return $this->content;
     }
-
-    public function date() {
-        return $this->date;
-    }
-
 
 }
