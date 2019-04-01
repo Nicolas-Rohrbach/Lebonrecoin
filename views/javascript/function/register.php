@@ -13,16 +13,25 @@ if( isset($_POST['user_email']) && isset($_POST['user_pwd']) && isset($_POST['us
 
     $model = new RegisterManager();
 
-    $login = $_POST['user_log'];
-    $email = $_POST['user_email'];
-    $pwd = md5($_POST['user_pwd']);
-    $type = $_POST['typeAnn'];
+    $login = filter_input(INPUT_POST,'user_log');
+    $email = filter_input(INPUT_POST,'user_email');
+    $pwd = md5(filter_input(INPUT_POST,'user_pwd'));
+    $type = filter_input(INPUT_POST,'typeAnn');
 
     if($model->checkNoDouble($email,$login)){ // Si les infos correspondent...
         $model->add($email,$login,$pwd,$type);
+        $param = json_decode(isset($_POST['user_email']) && isset($_POST['user_pwd']) && isset($_POST['user_log']) && isset($_POST['typeAnn']));
+
+        echo $param;
+    }
+    else {
+        $param = json_decode(false);
+        echo $param;;
     }
 }
+else {
+    $param = json_decode(isset($_POST['user_email']) && isset($_POST['user_pwd']) && isset($_POST['user_log']) && isset($_POST['typeAnn']));
 
-$param = json_decode(isset($_POST['user_email']) && isset($_POST['user_pwd']) && isset($_POST['user_log']) && isset($_POST['typeAnn']));
+    echo $param;
+}
 
-echo $param;

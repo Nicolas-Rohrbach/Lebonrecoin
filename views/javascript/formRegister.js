@@ -13,7 +13,12 @@ function echoFormRegister() {
 
 
     let label1 = $('<label >', { text:'Particulier' }).appendTo(form);
-    $('<input >', { type:'radio', value:'particulier', name:'typeAnn', id:'typeAnn'}).appendTo(label1);
+    $('<input >', { type:'radio',
+        value:'particulier',
+        name:'typeAnn',
+        id:'typeAnn',
+        required:''
+    }).appendTo(label1);
 
     let label2 = $('<label >', { text:'Professionel' }).appendTo(form);
 
@@ -26,7 +31,8 @@ function echoFormRegister() {
         type: 'text',
         class: 'form-control text-center modal-sm',
         id: 'user_log',
-        name: 'user_log'
+        name: 'user_log',
+        required:''
     }).appendTo(form);
 
     $('<label >', {for: 'user_email', text: 'Adresse email'}).appendTo(form);
@@ -34,7 +40,8 @@ function echoFormRegister() {
         type: 'email',
         class: 'form-control text-center modal-sm',
         id: 'user_email',
-        name: 'user_email'
+        name: 'user_email',
+        required:''
     }).appendTo(form);
 
     $('<label >', {for: 'user_pwd', text: 'Mot de passe'}).appendTo(form);
@@ -42,7 +49,8 @@ function echoFormRegister() {
         type: 'password',
         class: 'form-control text-center modal-sm',
         id: 'user_pwd',
-        name: 'user_pwd'
+        name: 'user_pwd',
+        required:''
     }).appendTo(form);
 
     $("<br />").appendTo(form);
@@ -76,7 +84,7 @@ function echoFormRegister() {
                     formConnexion();
                 }
                 else {
-                    alert(result);
+                    $('<div >', {text: 'Le login et/ou l\'email est déjà utilisé'}).appendTo('form');
                 }
 
             });

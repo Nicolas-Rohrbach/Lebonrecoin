@@ -8,16 +8,47 @@
 
 class OffreManager extends Model
 {
-    public function getOffres() {
-        return $this->getAll('OFFRE','Offre');
-    }
 
-    public function  addOffer($title,$text,$typeOff,$categorie) {
-        $req = $this->getBdd()->prepare('INSERT INTO OFFRE (TITLE, CONTENT, TYPE, CATEGORIE) VALUES (:title, :text, :type, :categorie)');
+    public function  addOffer($title,$text,$typeOff,$categorie,$login,$image) {
+        $req = $this->getBdd()->prepare('INSERT INTO OFFRE (TITLE, CONTENT, TYPE, CATEGORIE, LOGIN, IMAGE) VALUES (:title, :text, :type, :categorie, :login, :image)');
         $req->bindValue(':title',$title);
         $req->bindValue(':text',$text);
         $req->bindValue(':type',$typeOff);
         $req->bindValue(':categorie',$categorie);
+        $req->bindValue(':login',$login);
+        $req->bindValue(':image',$image);
         $req->execute();
+    }
+
+    public function getMyTuple($login) {
+        $var = [];
+        $req = $this->getBdd()->prepare('SELECT * FROM OFFRE WHERE LOGIN = :login');
+        $req->bindValue(':login', $login);
+        $req->execute();
+        while ($data = $req->fetch()) {
+            $var[] = $data;
+        }
+        return $var;
+        $req->closeCursor();
+    }
+
+    public function getMyTupleID($id) {
+        $var = [];
+        $req = $this->getBdd()->prepare('SELECT * FROM OFFRE WHERE ID = :id');
+        $req->bindValue(':id', $id);
+        $req->execute();
+        while ($data = $req->fetch()) {
+            $var[] = $data;
+        }
+        return $var;
+        $req->closeCursor();
+    }
+
+    public function deleteTuple($id) {
+
+        $req = $this->getBdd()->prepare('DELETE FROM OFFRE WHERE ID = :id');
+        $req->bindValue(':id', $id);
+        $req->execute();
+
     }
 }

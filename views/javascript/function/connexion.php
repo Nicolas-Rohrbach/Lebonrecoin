@@ -13,8 +13,8 @@ if( isset($_POST['user_login']) && isset($_POST['user_pass']) ){
 
     $model = new ConnexionManager();
 
-    $login = $_POST['user_login'];
-    $pwd = md5($_POST['user_pass']);
+    $login = filter_input(INPUT_POST,'user_login');
+    $pwd = md5(filter_input(INPUT_POST,'user_pass'));
 
     if($model->getConnexion($login,$pwd) > 0){
 

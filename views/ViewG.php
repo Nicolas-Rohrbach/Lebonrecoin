@@ -39,6 +39,8 @@ abstract class ViewG
     public function endpage() {
         echo '
     <script src="views/javascript/viewHome.js"></script>
+    <script src="views/javascript/viewOffer.js"></script>
+    <script src="views/javascript/viewAccount.js"></script>
     <script src="views/javascript/viewOffers.js"></script>
     <script src="views/javascript/formCreateOffer.js"></script>
     <script src="views/javascript/formConnexion.js"></script>

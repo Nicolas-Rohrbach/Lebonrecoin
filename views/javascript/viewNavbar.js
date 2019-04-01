@@ -9,7 +9,7 @@ function displayNavBar() {
 
     let li1 = $('<li >', {class: 'nav-item active'}).appendTo(ul);
     $('<button >', {
-        class: 'btn btn-sm btn-outline-secondary',
+        class: 'btn btn-sm nav-link',
         type:'button',
         id:'Home',
         onclick:'echoHome()',
@@ -18,7 +18,7 @@ function displayNavBar() {
 
     let li2 = $('<li >', {class: 'nav-item active'}).appendTo(ul);
     $('<button >', {
-        class: 'btn btn-sm btn-outline-secondary',
+        class: 'btn btn-sm nav-link',
         type:'button',
         id:'createOffer',
         onclick:'createOffer()',
@@ -27,20 +27,29 @@ function displayNavBar() {
 
     let li3 = $('<li >', {class: 'nav-item active'}).appendTo(ul);
     $('<button >', {
-        class: 'btn btn-sm btn-outline-secondary',
+        class: 'btn btn-sm nav-link',
         type:'button',
         id:'echoOffers',
         onclick:'echoOffers()',
         text: 'Voir les offres'
     }).appendTo(li3);
 
-    let li4 = $('<li >', {
+    let li4 = $('<li >', {class: 'nav-item active'}).appendTo(ul);
+    $('<button >', {
+        class: 'btn btn-sm nav-link',
+        type:'button',
+        id:'myAccount',
+        onclick:'myAccount()',
+        text: 'Mon compte'
+    }).appendTo(li4);
+
+    let li5 = $('<li >', {
         class:'nav-item active'
     }).appendTo(ul);
     $('<a >', {
         class:'nav-link',
         href:'/views/javascript/function/disconected.php',
         text: 'Déconnexion'
-    }).appendTo(li4);
+    }).appendTo(li5);
 
 }

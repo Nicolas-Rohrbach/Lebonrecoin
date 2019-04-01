@@ -29,7 +29,32 @@ abstract class Model
         $req = $this->getBdd()->prepare('SELECT * FROM ' . $table . ' ORDER BY id desc');
         $req->execute();
         while ($data = $req->fetch(PDO::FETCH_ASSOC)) {
-            $var[] = new $obj($data);
+            $var[] = $data;
+        }
+        return $var;
+        $req->closeCursor();
+    }
+
+    public function getTuple()
+    {
+        $var = [];
+        $req = $this->getBdd()->prepare('SELECT * FROM OFFRE');
+        $req->execute();
+        while ($data = $req->fetch()) {
+            $var[] = $data;
+        }
+        return $var;
+        $req->closeCursor();
+    }
+
+    public function getEMAIL($login)
+    {
+        $var = [];
+        $req = $this->getBdd()->prepare('SELECT * FROM USER WHERE LOGIN = :login');
+        $req->bindValue(':login', $login);
+        $req->execute();
+        while ($data = $req->fetch()) {
+            $var[] = $data;
         }
         return $var;
         $req->closeCursor();

@@ -15,7 +15,8 @@ function formConnexion() {
         type: 'text',
         class: 'form-control text-center modal-sm',
         id: 'user_login',
-        name: 'user_login'
+        name: 'user_login',
+        required:''
     }).appendTo(form);
 
     $('<label >', {for: 'user_pass', text: 'Mot de passe'}).appendTo(form);
@@ -23,7 +24,8 @@ function formConnexion() {
         type: 'password',
         class: 'form-control text-center modal-sm',
         id: 'user_pass',
-        name: 'user_pass'
+        name: 'user_pass',
+        required:''
     }).appendTo(form);
 
     $("<br />").appendTo(form);
@@ -56,7 +58,7 @@ function formConnexion() {
                     echoHome();
                 }
                 else {
-                    alert("non");
+                    $('<div >', {text: 'Erreur lors de la connexion'}).appendTo('form');
                 }
 
             });
