@@ -4,10 +4,10 @@ function createOffer() {
 
     let div = $('<div >', {align: 'center'}).appendTo('body');
 
-    $('<h1 >', {text:' Créer une offre/demande', class: 'text-center'}).appendTo(div);
+    $('<h1 >', {text:' Créer une demande ou une offre', class: 'text-center'}).appendTo(div);
 
 
-    let form = $('<form >', {enctype:'multipart/form-data', method: 'post', action: 'createOffer.php', id: 'createofferform'}).appendTo(div);
+    let form = $('<form >', {method: 'post', action: 'createOffer.php', id: 'createofferform'}).appendTo(div);
 
     $('<label >', {text: 'Catégorie *'}).appendTo(form);
     let select = $('<select >', {
@@ -18,12 +18,12 @@ function createOffer() {
 
     $('<option >', {value: 'Autre', text: ' Autre '}).appendTo(select);
     $('<option >', {value: 'Emploi', text: ' Emploi '}).appendTo(select);
-    $('<option >', {value: 'Véhicule', text: ' Véhicule '}).appendTo(select);
+    $('<option >', {value: 'Vehicule', text: ' Véhicule '}).appendTo(select);
     $('<option >', {value: 'Immobilier', text: ' Immobilier '}).appendTo(select);
     $('<option >', {value: 'Vacances', text: ' Vacances '}).appendTo(select);
-    $('<option >', {value: 'Multimédia', text: ' Multimédia '}).appendTo(select);
+    $('<option >', {value: 'Multimedia', text: ' Multimédia '}).appendTo(select);
     $('<option >', {value: 'Maison', text: ' Maison '}).appendTo(select);
-    $('<option >', {value: 'Matériel professionel', text: ' Matériel professionel '}).appendTo(select);
+    $('<option >', {value: 'Materiel professionel', text: ' Matériel professionel '}).appendTo(select);
     $('<option >', {value: 'Service', text: ' Service '}).appendTo(select);
 
     $("<br />").appendTo(form);
@@ -68,7 +68,7 @@ function createOffer() {
     $("<br />").appendTo(form);
 
     $('<label >', {text: 'Texte de l\'annonce'}).appendTo(form);
-    $('<input >', {
+    $('<textarea >', {
         type: 'text',
         class: 'form-control text-center modal-sm',
         id: 'text',
@@ -76,14 +76,14 @@ function createOffer() {
         required:''
     }).appendTo(form);
 
-    $('<label >', {text: 'Image de l\'annonce'}).appendTo(form);
-    $('<input >', {
-        type: 'file',
-        class: 'form-control text-center modal-sm',
-        id: 'image',
-        name: 'image',
-        required:''
-    }).appendTo(form);
+    // $('<label >', {text: 'Image de l\'annonce'}).appendTo(form);
+    // $('<input >', {
+    //     type: 'file',
+    //     class: 'form-control text-center modal-sm',
+    //     id: 'image',
+    //     name: 'image',
+    //     required:''
+    // }).appendTo(form);
 
     $("<br />").appendTo(form);
 
@@ -104,7 +104,7 @@ function createOffer() {
                     echoHome();
                 }
                 else {
-                    alert(data);
+                    createOffer();
                 }
 
             });

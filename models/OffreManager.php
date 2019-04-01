@@ -9,14 +9,14 @@
 class OffreManager extends Model
 {
 
-    public function  addOffer($title,$text,$typeOff,$categorie,$login,$image) {
-        $req = $this->getBdd()->prepare('INSERT INTO OFFRE (TITLE, CONTENT, TYPE, CATEGORIE, LOGIN, IMAGE) VALUES (:title, :text, :type, :categorie, :login, :image)');
+    public function  addOffer($title,$text,$typeOff,$categorie,$login) {
+        $req = $this->getBdd()->prepare('INSERT INTO OFFRE (TITLE, CONTENT, TYPE, CATEGORIE, LOGIN) VALUES (:title, :text, :type, :categorie, :login)');
         $req->bindValue(':title',$title);
         $req->bindValue(':text',$text);
         $req->bindValue(':type',$typeOff);
         $req->bindValue(':categorie',$categorie);
         $req->bindValue(':login',$login);
-        $req->bindValue(':image',$image);
+        //$req->bindValue(':image',$image);
         $req->execute();
     }
 

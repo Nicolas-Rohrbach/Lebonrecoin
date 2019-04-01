@@ -25,10 +25,10 @@ foreach ($var as $offres) {
                 echo '
             <div class="container text-center">
                 <h1 class="text-center">'. $offre['TYPE'].' - '. $offre['CATEGORIE'].' - '.$offre['TITLE']. ' </h1>
-                <img src="views/images/offre.png" class="img-thumbnail" alt="demande">
+                <img src="views/images/'.$offre['CATEGORIE'].'.png" class="imgOff" alt="demande">
                 <div class="text-center"> '.$offre['CONTENT'].' 
-                    <div >Posté(e) par '.$offre['LOGIN'].' </div>
-                        <div > Contact: '.$email['EMAIL'].'</div> 
+                    <div class="text-secondary">Posté(e) par '.$offre['LOGIN'].' </div>
+                        <div class="text-secondary"> Contact: '.$email['EMAIL'].'</div> 
             </div>';
             }
         }

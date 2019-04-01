@@ -22,7 +22,7 @@ function displayNavBar() {
         type:'button',
         id:'createOffer',
         onclick:'createOffer()',
-        text: 'Déposer une offre'
+        text: 'Déposer une demande ou une offre'
     }).appendTo(li2);
 
     let li3 = $('<li >', {class: 'nav-item active'}).appendTo(ul);
@@ -31,7 +31,7 @@ function displayNavBar() {
         type:'button',
         id:'echoOffers',
         onclick:'echoOffers()',
-        text: 'Voir les offres'
+        text: 'Voir les demandes et les offres'
     }).appendTo(li3);
 
     let li4 = $('<li >', {class: 'nav-item active'}).appendTo(ul);

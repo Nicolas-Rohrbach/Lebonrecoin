@@ -8,8 +8,8 @@ function echoOffer(id) {
         data: {
             myParams: id,
         },
-    }).done(function(result) {
-        let div = $('<div >').appendTo('body').append(result);
+    }).done(function(data) {
+        let div = $('<div >').appendTo('body').append(data);
         $(div).hide();
         $(div).fadeIn(1000);
     });

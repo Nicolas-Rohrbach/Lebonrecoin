@@ -59,7 +59,7 @@ function formConnexion() {
                 data: $(this).serialize(),
             }).done(function(result) {
                 if(result == true) {
-                    $('#myModal').hide();
+                    $('#myModal');
                     echoHome();
                 }
                 else {

@@ -23,10 +23,10 @@ foreach ($var as $offres) {
         echo '
                 <div class="column">
                 <div class="card">
-                    <img src="views/images/offre.png" class="img-thumbnail" alt="demande">
+                    <h3 class="card-title"> '. $offre['TYPE'].' - '. $offre['CATEGORIE'].' </h3>
+                    <img src="views/images/'.$offre['CATEGORIE'].'.png" class="card-img-top" alt="demande">
                 <div class="card-body">
-                    <h5 class="card-title">'. $offre['TITLE'] .' - '. $offre['CATEGORIE'].' </h5>
-                    <p class="card-text">' .$offre['CONTENT']. '</p>
+                    <h5 class="card-title">'. $offre['TITLE'] .'</h5>
                     <button class="btn btn-lg btn-primary btn-block modal-sm " id="'. $offre['ID'].'" onclick="echoOffer(this.id)"> Voir </button>
                     <button class="btn btn-lg btn-primary btn-block modal-sm" id="'. $offre['ID'].'" onclick="supprOffer(this.id)"> Supprimer </button>
                   </div>

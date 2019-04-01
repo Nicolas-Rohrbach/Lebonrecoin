@@ -26,9 +26,6 @@ function supprOffer(id) {
             if(data > 0) {
                 myAccount();
             }
-            else {
-                alert("non");
-            }
         }
     });
 }

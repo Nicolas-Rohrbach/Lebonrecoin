@@ -80,10 +80,6 @@
     color: black;
 }
 
-* {
-    box-sizing: border-box;
-}
-
 /* Float four columns side by side */
 .column {
     float: left;
@@ -112,8 +108,14 @@
 
 /* Style the counter cards */
 .card {
+    box-sizing: border-box;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     padding: 16px;
     text-align: center;
     background-color: #f1f1f1;
+}
+
+.imgOff {
+    width: 400px;
+    height: 400px;
 }

@@ -2,12 +2,14 @@ function echoHome() {
 
     clear();
 
+    let div = $('<div >', {align:'center', class:'container'}).appendTo('body');
+
     $('<div >', { class:'text-center'
-    }).appendTo('body').append($('<img >', {
+    }).appendTo(div).append($('<img >', {
         class:'img-thumbnail',
         alt:'France',
         src:'views/images/France.jpg'
-    }))
+    }));
 
     $('<div >', { class:'text-center',
         text:'Lebonrecoin est le site référent' +
@@ -21,7 +23,7 @@ function echoHome() {
             'Avec des milliers de nouvelles annonces mises en ligne ' +
             'chaque jour vous trouverez l’objet d’occasion ou neuf ' +
             'que vous désirez.'
-    }).appendTo('body')
+    }).appendTo(div);
 
 
 }

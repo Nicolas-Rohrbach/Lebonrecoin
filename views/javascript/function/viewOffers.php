@@ -14,20 +14,20 @@ $models = new OffreManager();
 $var[] = $models->getTuple();
 
 foreach ($var as $offres) {
+
     foreach ($offres as $offre) {
-        echo '
-                <div class="column">
-                <div class="card" style="width: 18rem;">
-                    <img src="views/images/offre.png" class="card-img-top" alt="demande">
-                    <div class="card-body">
-                    <h5 class="card-title">'. $offre['TITLE'] .' - '. $offre['CATEGORIE'].' </h5>
-                    <p class="card-text">' .$offre['CONTENT']. '</p>
-                    <button class="btn btn-lg btn-primary btn-block modal-sm " id="'. $offre['ID'].'" onclick="echoOffer(this.id)"> Voir </button>
-                  </div>
-                </div>
-        </div>';
 
-
+        echo '<div class="column">
+                    <div class="card">
+                        <h3 class="card-title"> '. $offre['TYPE'].' - '. $offre['CATEGORIE'].' </h3>
+                        <img src="views/images/'.$offre['CATEGORIE'].'.png" class="card-img-top" alt="demande">
+                        <div class="card-body">
+                            <h5 class="card-title">'. $offre['TITLE'] .' </h5>
+                            <button class="btn btn-lg btn-primary btn-block modal-sm " id="'. $offre['ID'].'" onclick="echoOffer(this.id)"> Voir </button>
+                            <div class="text-secondary">Posté(e) par '.$offre['LOGIN'].' </div>
+                        </div>
+                    </div>
+                </div>';
     }
 }
 
