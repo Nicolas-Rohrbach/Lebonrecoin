@@ -44,6 +44,11 @@ function formConnexion() {
         onclick: 'echoFormRegister()'
     }).appendTo(div);
 
+    $("<div>", {
+        id: "error",
+        class: "text-danger",
+    }).appendTo(form).hide();
+
     $('#myModal').show();
 
     $(document).ready(function() {
@@ -58,9 +63,8 @@ function formConnexion() {
                     echoHome();
                 }
                 else {
-                    $('<div >', {text: 'Erreur lors de la connexion'}).appendTo('form');
+                    $('#error').empty().text("Erreur de connexion").show();
                 }
-
             });
             return false;
         });

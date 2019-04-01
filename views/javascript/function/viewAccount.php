@@ -23,14 +23,8 @@ foreach ($var as $offres) {
         echo '
                 <div class="column">
                 <div class="card">
-        ';
-        if($offre['TYPE'] == "Demande") {
-            echo '<img src="views/images/demande.jpg" alt="demande">';
-        }
-        else {
-            echo '<img src="views/images/offre.png" alt="offre">';
-        }
-        echo '<div class="card-body">
+                    <img src="views/images/offre.png" class="img-thumbnail" alt="demande">
+                <div class="card-body">
                     <h5 class="card-title">'. $offre['TITLE'] .' - '. $offre['CATEGORIE'].' </h5>
                     <p class="card-text">' .$offre['CONTENT']. '</p>
                     <button class="btn btn-lg btn-primary btn-block modal-sm " id="'. $offre['ID'].'" onclick="echoOffer(this.id)"> Voir </button>

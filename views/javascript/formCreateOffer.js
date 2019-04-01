@@ -7,7 +7,7 @@ function createOffer() {
     $('<h1 >', {text:' Créer une offre/demande', class: 'text-center'}).appendTo(div);
 
 
-    let form = $('<form >', {method: 'post', action: 'createOffer.php', id: 'createofferform',  enctype:"multipart/form-data"}).appendTo(div);
+    let form = $('<form >', {enctype:'multipart/form-data', method: 'post', action: 'createOffer.php', id: 'createofferform'}).appendTo(div);
 
     $('<label >', {text: 'Catégorie *'}).appendTo(form);
     let select = $('<select >', {
@@ -104,7 +104,7 @@ function createOffer() {
                     echoHome();
                 }
                 else {
-                    alert(result);
+                    alert(data);
                 }
 
             });

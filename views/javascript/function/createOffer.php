@@ -11,7 +11,7 @@ include_once "../../../models/OffreManager.php";
 
 session_start();
 
-if( isset($_POST['title']) && isset($_POST['text']) && isset($_POST['typeOff']) && isset($_POST['categorie'])){
+if( isset($_POST['title']) && isset($_POST['text']) && isset($_POST['typeOff']) && isset($_POST['categorie']) && isset($_FILES['image'])){
 
     $model = new OffreManager();
 
@@ -20,7 +20,7 @@ if( isset($_POST['title']) && isset($_POST['text']) && isset($_POST['typeOff']) 
     $typeOff = filter_input(INPUT_POST,'typeOff');
     $categorie = filter_input(INPUT_POST,'categorie');
     $login = $_SESSION['login'];
-    $image = basename($_POST['image']['name']);
+    $image = basename($_FILES['image']['name']);
 
     $dossier = 'views/images/';
 
@@ -29,8 +29,6 @@ if( isset($_POST['title']) && isset($_POST['text']) && isset($_POST['typeOff']) 
     $taille = filesize($_FILES['image']['tmp_name']);
     $extensions = array('.png', '.gif', '.jpg', '.jpeg');
     $extension = strrchr($_FILES['image']['name'], '.');
-
-    echo $_FILES['image']['name'];
 
     if(!in_array($extension, $extensions)) //Si l'extension n'est pas dans le tableau
     {
@@ -49,6 +47,6 @@ if( isset($_POST['title']) && isset($_POST['text']) && isset($_POST['typeOff']) 
 
 }
 
-$param = json_decode(isset($_POST['title']) && isset($_POST['text']) && isset($_POST['typeOff']) && isset($_POST['categorie']));
+$param = json_decode(isset($_POST['title']) && isset($_POST['text']) && isset($_POST['typeOff']) && isset($_POST['categorie']) && isset($_FILES['image']));
 
 echo $param;

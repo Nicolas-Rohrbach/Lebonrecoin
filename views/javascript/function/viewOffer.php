@@ -23,11 +23,12 @@ foreach ($var as $offres) {
         foreach ($var2 as $emails) {
             foreach ($emails as $email) {
                 echo '
-            <div class="container">
+            <div class="container text-center">
                 <h1 class="text-center">'. $offre['TYPE'].' - '. $offre['CATEGORIE'].' - '.$offre['TITLE']. ' </h1>
+                <img src="views/images/offre.png" class="img-thumbnail" alt="demande">
                 <div class="text-center"> '.$offre['CONTENT'].' 
                     <div >Posté(e) par '.$offre['LOGIN'].' </div>
-                        <div > Contacte: '.$email['EMAIL'].'</div> 
+                        <div > Contact: '.$email['EMAIL'].'</div> 
             </div>';
             }
         }

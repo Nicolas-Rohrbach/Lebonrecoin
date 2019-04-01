@@ -71,6 +71,11 @@ function echoFormRegister() {
         onclick: 'formConnexion()'
     }).appendTo(div);
 
+    $("<div>", {
+        id: "error",
+        class: "text-danger",
+    }).appendTo(form).hide();
+
     $('#myModal').show();
 
     $(document).ready(function() {
@@ -84,7 +89,7 @@ function echoFormRegister() {
                     formConnexion();
                 }
                 else {
-                    $('<div >', {text: 'Le login et/ou l\'email est déjà utilisé'}).appendTo('form');
+                    $('#error').empty().text("Email ou login déjà utilisé").show();
                 }
 
             });
