@@ -33,7 +33,7 @@ function echoFormRegister() {
 
     $('<input >', { type:'radio', value:'professionel', name:'typeAnn', id:'typeAnn'}).appendTo(label2);
 
-    $('<label >', {for: 'user_log', text: 'Pseudo'}).appendTo(form);
+    $('<label >', {for: 'user_log', text: 'Pseudo  (4 caractères minimum)'}).appendTo(form);
     $('<input >', {
         type: 'text',
         class: 'form-control text-center modal-sm',
@@ -51,7 +51,7 @@ function echoFormRegister() {
         required:''
     }).appendTo(form);
 
-    $('<label >', {for: 'user_pwd', text: 'Mot de passe'}).appendTo(form);
+    $('<label >', {for: 'user_pwd', text: 'Mot de passe (4 caractères minimum)'}).appendTo(form);
     $('<input >', {
         type: 'password',
         class: 'form-control text-center modal-sm',
@@ -103,7 +103,7 @@ function echoFormRegister() {
                 }
                 else { // Si l'enregistrement est refusé, on affiche un message d'erreur et on fait trembler l'écran pour indiquer l'erreur
                     $('#error').empty().text("Email ou login déjà utilisé").show();
-                    $('#myModal').effect( "shake" );
+                    $(div).effect( "shake" );
                 }
 
             });

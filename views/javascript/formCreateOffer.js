@@ -98,6 +98,9 @@ function createOffer() {
         text: 'Poster'
     }).appendTo(form);
 
+    $(div).hide(); // Cache la div puis la fait apparaître avec les cards progressivement
+    $(div).fadeIn(1000);
+
     /*
         Appel de createOffer.php
     */

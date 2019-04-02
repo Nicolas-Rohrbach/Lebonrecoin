@@ -9,29 +9,37 @@
 include_once '../../../models/Model.php';
 require_once "../../../models/RegisterManager.php";
 
-if( isset($_POST['user_email']) && isset($_POST['user_pwd']) && isset($_POST['user_log']) && isset($_POST['typeAnn']) ){
+if(!(strlen($_POST['user_pwd']) <= 4) || !(strlen($_POST['user_log'] <= 4))) {
 
-    $model = new RegisterManager();
+    if (isset($_POST['user_email']) && isset($_POST['user_pwd']) && isset($_POST['user_log']) && isset($_POST['typeAnn'])) {
 
-    $login = filter_input(INPUT_POST,'user_log');
-    $email = filter_input(INPUT_POST,'user_email');
-    $pwd = md5(filter_input(INPUT_POST,'user_pwd'));
-    $type = filter_input(INPUT_POST,'typeAnn');
+        $model = new RegisterManager();
 
-    if($model->checkNoDouble($email,$login)){ // Si les infos correspondent...
-        $model->add($email,$login,$pwd,$type);
+
+        $login = filter_input(INPUT_POST, 'user_log');
+        $email = filter_input(INPUT_POST, 'user_email');
+        $pwd = md5(filter_input(INPUT_POST, 'user_pwd'));
+        $type = filter_input(INPUT_POST, 'typeAnn');
+
+        if ($model->checkNoDouble($email, $login)) { // Si les infos correspondent...
+            $model->add($email, $login, $pwd, $type);
+            $param = json_decode(isset($_POST['user_email']) && isset($_POST['user_pwd']) && isset($_POST['user_log']) && isset($_POST['typeAnn']));
+
+            echo $param;
+        }
+        else {
+            $param = json_decode(false);
+            echo $param;;
+        }
+    }
+    else {
         $param = json_decode(isset($_POST['user_email']) && isset($_POST['user_pwd']) && isset($_POST['user_log']) && isset($_POST['typeAnn']));
 
         echo $param;
     }
-    else {
-        $param = json_decode(false);
-        echo $param;;
-    }
 }
 else {
-    $param = json_decode(isset($_POST['user_email']) && isset($_POST['user_pwd']) && isset($_POST['user_log']) && isset($_POST['typeAnn']));
-
+    $param = json_decode(array('size' => 'Non'));
     echo $param;
 }
 

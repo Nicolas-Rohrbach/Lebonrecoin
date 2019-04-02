@@ -77,7 +77,7 @@ function formConnexion() {
                 }
                 else { // Si la connexion est refusée, on affiche un message d'erreur et on fait trembler l'écran pour indiquer l'erreur
                     $('#error').empty().text("Erreur de connexion").show();
-                    $('#myModal').effect( "shake" );
+                    $(div).effect( "shake" );
                 }
             });
             return false;
