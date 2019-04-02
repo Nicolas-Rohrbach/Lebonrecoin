@@ -13,9 +13,17 @@ $models = new OffreManager();
 
 $var[] = $models->getTuple();
 
+$compteur = 0;
+
 foreach ($var as $offres) {
 
     foreach ($offres as $offre) {
+
+        if($compteur % 4 == 0) {
+            echo '<div class="row">';
+        }
+
+        $compteur = $compteur + 1;
 
         echo '<div class="column">
                     <div class="card">
@@ -28,6 +36,10 @@ foreach ($var as $offres) {
                         </div>
                     </div>
                 </div>';
+    }
+
+    if($compteur % 4 == 3) {
+        echo '</div>';
     }
 }
 

@@ -7,10 +7,9 @@ function myAccount() {
         url: 'views/javascript/function/viewAccount.php',
     }).done(function(data) {
         let divC = $('<div >', {class:'container'}).appendTo('body');
-        let divR = $('<div >', {class:'row'}).appendTo(divC);
-        $('<div >').appendTo(divR).append(data)
+        $(data).appendTo(divC);
         $(divC).hide();
-        $(divC).fadeIn(1000);;
+        $(divC).fadeIn(1000);
     });
 }
 
