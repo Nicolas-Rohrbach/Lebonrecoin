@@ -1,3 +1,7 @@
+/*
+    Affiche le menu.
+ */
+
 function displayNavBar() {
 
     let header = $('<header >').appendTo('body').append('<br/>').append('<br/>').append('<br/>');
@@ -12,7 +16,7 @@ function displayNavBar() {
         class: 'btn btn-sm nav-link',
         type:'button',
         id:'Home',
-        onclick:'echoHome()',
+        onclick:'echoHome()', // Affiche la page d'accueil
         text: 'Lebonrecoin'
     }).appendTo(li1);
 
@@ -21,7 +25,7 @@ function displayNavBar() {
         class: 'btn btn-sm nav-link',
         type:'button',
         id:'createOffer',
-        onclick:'createOffer()',
+        onclick:'createOffer()', // Affiche le formulaire qui permet de créer une offre/demande
         text: 'Déposer une demande ou une offre'
     }).appendTo(li2);
 
@@ -30,7 +34,7 @@ function displayNavBar() {
         class: 'btn btn-sm nav-link',
         type:'button',
         id:'echoOffers',
-        onclick:'echoOffers()',
+        onclick:'echoOffers()', // Affiche toutes les offres/demandes créées par les utilisateurs
         text: 'Voir les demandes et les offres'
     }).appendTo(li3);
 
@@ -39,7 +43,7 @@ function displayNavBar() {
         class: 'btn btn-sm nav-link',
         type:'button',
         id:'myAccount',
-        onclick:'myAccount()',
+        onclick:'myAccount()', // Affiche les offres/demandes crées par l'utilisateur
         text: 'Mon compte'
     }).appendTo(li4);
 
@@ -48,7 +52,7 @@ function displayNavBar() {
     }).appendTo(ul);
     $('<a >', {
         class:'nav-link',
-        href:'/views/javascript/function/disconected.php',
+        href:'/views/javascript/function/disconected.php', // Permet de se déconnecter
         text: 'Déconnexion'
     }).appendTo(li5);
 

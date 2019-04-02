@@ -1,6 +1,10 @@
+/*
+    Affiche la page d'accueil.
+ */
+
 function echoHome() {
 
-    clear();
+    clear(); // vide le body est affiche la navbar
 
     let div = $('<div >', {align:'center', class:'container'}).appendTo('body');
 

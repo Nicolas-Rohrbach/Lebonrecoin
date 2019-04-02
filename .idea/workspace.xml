@@ -2,11 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="29ad2ca7-c635-4f75-9672-195d973663c2" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/views/javascript/jquery-ui.min.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/javascript/function/viewAccount.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/javascript/function/viewAccount.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/javascript/function/viewOffers.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/javascript/function/viewOffers.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/ViewG.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/ViewG.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/javascript/formConnexion.js" beforeDir="false" afterPath="$PROJECT_DIR$/views/javascript/formConnexion.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/javascript/formCreateOffer.js" beforeDir="false" afterPath="$PROJECT_DIR$/views/javascript/formCreateOffer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/javascript/formRegister.js" beforeDir="false" afterPath="$PROJECT_DIR$/views/javascript/formRegister.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/javascript/viewAccount.js" beforeDir="false" afterPath="$PROJECT_DIR$/views/javascript/viewAccount.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/javascript/viewHome.js" beforeDir="false" afterPath="$PROJECT_DIR$/views/javascript/viewHome.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/javascript/viewNavbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/views/javascript/viewNavbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/javascript/viewOffer.js" beforeDir="false" afterPath="$PROJECT_DIR$/views/javascript/viewOffer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/javascript/viewOffers.js" beforeDir="false" afterPath="$PROJECT_DIR$/views/javascript/viewOffers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/javascript/views.js" beforeDir="false" afterPath="$PROJECT_DIR$/views/javascript/views.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,44 +25,7 @@
     <pharConfigPath>$PROJECT_DIR$/mooc-symfony4/composer.json</pharConfigPath>
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/javascript/viewOffers.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="31" lean-forward="true" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/javascript/viewAccount.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="23" lean-forward="true" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/views/javascript/function/viewAccount.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="26" column="9" lean-forward="true" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/javascript/function/viewOffers.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="19" column="33" lean-forward="true" selection-start-line="19" selection-start-column="33" selection-end-line="19" selection-end-column="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -110,28 +80,28 @@
         <option value="$PROJECT_DIR$/controllers/Home.php" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/views/javascript/menu.js" />
-        <option value="$PROJECT_DIR$/views/javascript/views.js" />
         <option value="$PROJECT_DIR$/models/RegisterManager.php" />
         <option value="$PROJECT_DIR$/models/Offre.php" />
         <option value="$PROJECT_DIR$/views/javascript/function/deleteOffer.php" />
         <option value="$PROJECT_DIR$/views/javascript/function/connexion.php" />
         <option value="$PROJECT_DIR$/models/Model.php" />
         <option value="$PROJECT_DIR$/views/javascript/function/register.php" />
-        <option value="$PROJECT_DIR$/views/javascript/viewOffer.js" />
         <option value="$PROJECT_DIR$/views/javascript/function/createOffer.php" />
         <option value="$PROJECT_DIR$/models/OffreManager.php" />
-        <option value="$PROJECT_DIR$/views/css/style.css" />
         <option value="$PROJECT_DIR$/views/javascript/function/viewOffer.php" />
+        <option value="$PROJECT_DIR$/views/javascript/function/viewOffers.php" />
+        <option value="$PROJECT_DIR$/views/javascript/function/viewAccount.php" />
         <option value="$PROJECT_DIR$/views/ViewG.php" />
-        <option value="$PROJECT_DIR$/views/javascript/viewNavbar.js" />
+        <option value="$PROJECT_DIR$/views/css/style.css" />
         <option value="$PROJECT_DIR$/views/javascript/formConnexion.js" />
         <option value="$PROJECT_DIR$/views/javascript/formRegister.js" />
         <option value="$PROJECT_DIR$/views/javascript/formCreateOffer.js" />
-        <option value="$PROJECT_DIR$/views/javascript/viewHome.js" />
-        <option value="$PROJECT_DIR$/views/javascript/viewOffers.js" />
-        <option value="$PROJECT_DIR$/views/javascript/function/viewOffers.php" />
         <option value="$PROJECT_DIR$/views/javascript/viewAccount.js" />
-        <option value="$PROJECT_DIR$/views/javascript/function/viewAccount.php" />
+        <option value="$PROJECT_DIR$/views/javascript/viewOffers.js" />
+        <option value="$PROJECT_DIR$/views/javascript/viewNavbar.js" />
+        <option value="$PROJECT_DIR$/views/javascript/viewHome.js" />
+        <option value="$PROJECT_DIR$/views/javascript/viewOffer.js" />
+        <option value="$PROJECT_DIR$/views/javascript/views.js" />
       </list>
     </option>
   </component>
@@ -173,7 +143,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -220,6 +189,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -232,17 +202,17 @@
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.composer" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Rohrb\PhpstormProjects\Lebonrecoin\views\images" />
-      <recent name="C:\Users\Rohrb\PhpstormProjects\Lebonrecoin\views\javascript" />
-      <recent name="C:\Users\Rohrb\PhpstormProjects\Lebonrecoin\VIEW\Javascript\Function" />
-      <recent name="C:\Users\Rohrb\PhpstormProjects\Lebonrecoin\VIEW\Images" />
-      <recent name="C:\Users\Rohrb\PhpstormProjects\Lebonrecoin\CONTROLLER" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Rohrb\PhpstormProjects\Lebonrecoin\VIEW" />
       <recent name="C:\Users\Rohrb\PhpstormProjects\Lebonrecoin\MODEL" />
       <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Rohrb\PhpstormProjects\Lebonrecoin\views\javascript" />
+      <recent name="C:\Users\Rohrb\PhpstormProjects\Lebonrecoin\views\images" />
+      <recent name="C:\Users\Rohrb\PhpstormProjects\Lebonrecoin\VIEW\Javascript\Function" />
+      <recent name="C:\Users\Rohrb\PhpstormProjects\Lebonrecoin\VIEW\Images" />
+      <recent name="C:\Users\Rohrb\PhpstormProjects\Lebonrecoin\CONTROLLER" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -285,7 +255,8 @@
       <workItem from="1553954195204" duration="18524000" />
       <workItem from="1554020796995" duration="38078000" />
       <workItem from="1554124960331" duration="20777000" />
-      <workItem from="1554187948951" duration="1569000" />
+      <workItem from="1554187948951" duration="1675000" />
+      <workItem from="1554219051697" duration="2978000" />
     </task>
     <task id="LOCAL-00001" summary="MVC">
       <created>1553432175110</created>
@@ -343,17 +314,23 @@
       <option name="project" value="LOCAL" />
       <updated>1554149763607</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Affichage multiple des offres et demandes améliorés">
+      <created>1554189603618</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1554189603618</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="204343000" />
+    <option name="totallyTimeSpent" value="207427000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1380597" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13965885" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -365,7 +342,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32936078" />
-      <window_info anchor="bottom" id="File Transfer" order="9" sideWeight="0.4989339" visible="true" weight="0.32936078" />
+      <window_info anchor="bottom" id="File Transfer" order="9" sideWeight="0.4989339" weight="0.32936078" />
       <window_info anchor="bottom" id="Database Changes" order="10" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.20260021" />
       <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.5010661" side_tool="true" weight="0.32936078" />
@@ -387,7 +364,8 @@
     <MESSAGE value="Affichage offre + affichage offre perso + affichage général des offres" />
     <MESSAGE value="Mise en place des erreurs de connexion et inscription" />
     <MESSAGE value="Affichage card modifié" />
-    <option name="LAST_COMMIT_MESSAGE" value="Affichage card modifié" />
+    <MESSAGE value="Affichage multiple des offres et demandes améliorés" />
+    <option name="LAST_COMMIT_MESSAGE" value="Affichage multiple des offres et demandes améliorés" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/controllers/Login.php" />
@@ -541,66 +519,10 @@
     <entry file="file://$PROJECT_DIR$/views/images/Vacances.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="807">
-          <caret line="117" column="9" lean-forward="true" selection-start-line="117" selection-start-column="9" selection-end-line="117" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/javascript/function/createOffer.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="748">
           <caret line="49" column="127" selection-start-line="49" selection-start-column="127" selection-end-line="49" selection-end-column="127" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/ViewG.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="29" column="65" selection-start-line="29" selection-start-column="65" selection-end-line="29" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/javascript/viewOffer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="21" lean-forward="true" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/javascript/views.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/javascript/viewNavbar.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="33" column="46" selection-start-line="33" selection-start-column="46" selection-end-line="33" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/javascript/formRegister.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1496">
-          <caret line="88" column="35" selection-start-line="88" selection-start-column="35" selection-end-line="88" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/javascript/formCreateOffer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="61" selection-start-line="4" selection-start-column="61" selection-end-line="4" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/javascript/formConnexion.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="620">
-          <caret line="62" column="30" selection-start-line="62" selection-start-column="30" selection-end-line="62" selection-end-column="30" />
         </state>
       </provider>
     </entry>
@@ -611,38 +533,112 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/javascript/viewHome.js">
+    <entry file="file://$PROJECT_DIR$/views/ViewG.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="59" selection-start-line="4" selection-start-column="59" selection-end-line="4" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/javascript/viewOffers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="31" lean-forward="true" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/javascript/viewAccount.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="23" lean-forward="true" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/javascript/function/viewOffers.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="19" column="33" lean-forward="true" selection-start-line="19" selection-start-column="33" selection-end-line="19" selection-end-column="33" />
+        <state relative-caret-position="391">
+          <caret line="28" column="78" selection-start-line="28" selection-start-column="78" selection-end-line="28" selection-end-column="78" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/javascript/function/viewAccount.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="26" column="9" lean-forward="true" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
+        <state relative-caret-position="425">
+          <caret line="30" column="14" selection-start-line="30" selection-start-column="14" selection-end-line="30" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="773">
+          <caret line="120" column="1" lean-forward="true" selection-start-line="120" selection-start-column="1" selection-end-line="120" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/javascript/viewHome.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="29" selection-start-line="1" selection-start-column="29" selection-end-line="1" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/javascript/viewAccount.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="12" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="50" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/javascript/formRegister.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1547">
+          <caret line="91" column="4" selection-start-line="91" selection-start-column="4" selection-end-line="91" selection-end-column="4" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/javascript/formCreateOffer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1904">
+          <caret line="112" column="31" selection-start-line="112" selection-start-column="31" selection-end-line="112" selection-end-column="31" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/javascript/function/viewOffers.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="19" column="33" lean-forward="true" selection-start-line="19" selection-start-column="33" selection-end-line="19" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/javascript/viewOffers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="2" lean-forward="true" selection-start-column="2" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/javascript/viewNavbar.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="2" selection-end-column="3" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/javascript/viewOffer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="50" selection-start-line="7" selection-start-column="50" selection-end-line="7" selection-end-column="50" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/javascript/formConnexion.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="13" lean-forward="true" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="50" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/javascript/views.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
         </state>
       </provider>
     </entry>

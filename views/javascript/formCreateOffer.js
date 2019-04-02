@@ -1,7 +1,12 @@
+/*
+    Form pour pouvoir créer une offre, lors du submit le fichier createOffer.php est appellé pour pouvoir créer une offre/demande.
+*/
+
 function createOffer() {
 
-    clear();
+    clear(); // vide le body est affiche la navbar
 
+    // Création du form
     let div = $('<div >', {align: 'center'}).appendTo('body');
 
     $('<h1 >', {text:' Créer une demande ou une offre', class: 'text-center'}).appendTo(div);
@@ -93,6 +98,10 @@ function createOffer() {
         text: 'Poster'
     }).appendTo(form);
 
+    /*
+        Appel de createOffer.php
+    */
+
     $(document).ready(function() {
         $("#createofferform").submit(function (data){
             $.ajax({
@@ -100,13 +109,9 @@ function createOffer() {
                 type: 'post',
                 data: $(this).serialize(),
             }).done(function(result) {
-                if(result == true) {
-                    echoHome();
+                if(result == true) { //Lorsque l'offre/demande est crée, redirection sur les offres/demandes du la personne
+                    myAccount();
                 }
-                else {
-                    createOffer();
-                }
-
             });
             return false;
         });
