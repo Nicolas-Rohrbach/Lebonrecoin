@@ -9,7 +9,7 @@
 include_once '../../../models/Model.php';
 require_once "../../../models/RegisterManager.php";
 
-if(!(strlen($_POST['user_pwd']) <= 4) || !(strlen($_POST['user_log'] <= 4))) {
+if(!(strlen($_POST['user_pwd']) <= 4) && !(strlen($_POST['user_log']) <= 4)) {
 
     if (isset($_POST['user_email']) && isset($_POST['user_pwd']) && isset($_POST['user_log']) && isset($_POST['typeAnn'])) {
 
@@ -39,7 +39,7 @@ if(!(strlen($_POST['user_pwd']) <= 4) || !(strlen($_POST['user_log'] <= 4))) {
     }
 }
 else {
-    $param = json_decode(array('size' => 'Non'));
+    $param = json_decode(false);
     echo $param;
 }
 

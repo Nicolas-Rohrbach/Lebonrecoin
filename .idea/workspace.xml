@@ -3,11 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="29ad2ca7-c635-4f75-9672-195d973663c2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/javascript/formConnexion.js" beforeDir="false" afterPath="$PROJECT_DIR$/views/javascript/formConnexion.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/javascript/formCreateOffer.js" beforeDir="false" afterPath="$PROJECT_DIR$/views/javascript/formCreateOffer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/javascript/formRegister.js" beforeDir="false" afterPath="$PROJECT_DIR$/views/javascript/formRegister.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/javascript/function/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/javascript/function/register.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/javascript/viewHome.js" beforeDir="false" afterPath="$PROJECT_DIR$/views/javascript/viewHome.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,11 +15,38 @@
     <pharConfigPath>$PROJECT_DIR$/mooc-symfony4/composer.json</pharConfigPath>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="31" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/views/javascript/function/register.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="11" column="40" selection-start-line="11" selection-start-column="40" selection-end-line="11" selection-end-column="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/models/Model.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="14" column="106" selection-start-line="14" selection-start-column="100" selection-end-line="14" selection-end-column="106" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/javascript/formRegister.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="745">
+            <state relative-caret-position="-534">
               <caret line="53" column="77" selection-start-line="53" selection-start-column="77" selection-end-line="53" selection-end-column="77" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
@@ -102,13 +125,13 @@
         <option value="$PROJECT_DIR$/views/javascript/viewNavbar.js" />
         <option value="$PROJECT_DIR$/views/javascript/viewOffer.js" />
         <option value="$PROJECT_DIR$/views/javascript/views.js" />
-        <option value="$PROJECT_DIR$/views/javascript/function/register.php" />
         <option value="$PROJECT_DIR$/views/javascript/formConnexion.js" />
         <option value="$PROJECT_DIR$/views/css/style.css" />
         <option value="$PROJECT_DIR$/views/javascript/function/viewOffers.php" />
         <option value="$PROJECT_DIR$/views/javascript/viewHome.js" />
         <option value="$PROJECT_DIR$/views/javascript/formCreateOffer.js" />
         <option value="$PROJECT_DIR$/views/javascript/formRegister.js" />
+        <option value="$PROJECT_DIR$/views/javascript/function/register.php" />
       </list>
     </option>
   </component>
@@ -257,7 +280,9 @@
       <workItem from="1554020796995" duration="38078000" />
       <workItem from="1554124960331" duration="20777000" />
       <workItem from="1554187948951" duration="1675000" />
-      <workItem from="1554219051697" duration="5398000" />
+      <workItem from="1554219051697" duration="5631000" />
+      <workItem from="1554225483254" duration="397000" />
+      <workItem from="1554240721290" duration="371000" />
     </task>
     <task id="LOCAL-00001" summary="MVC">
       <created>1553432175110</created>
@@ -329,17 +354,24 @@
       <option name="project" value="LOCAL" />
       <updated>1554222094050</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Ajout d'effet JQuery et petites modifications des formulaires">
+      <created>1554224659390</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1554224659390</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="209847000" />
+    <option name="totallyTimeSpent" value="210848000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13965885" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14285715" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -351,7 +383,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32936078" />
-      <window_info anchor="bottom" id="File Transfer" order="9" sideWeight="0.4989339" weight="0.32936078" />
+      <window_info anchor="bottom" id="File Transfer" order="9" sideWeight="0.4989339" visible="true" weight="0.32936078" />
       <window_info anchor="bottom" id="Database Changes" order="10" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.20260021" />
       <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.5010661" side_tool="true" weight="0.32936078" />
@@ -375,7 +407,8 @@
     <MESSAGE value="Affichage card modifié" />
     <MESSAGE value="Affichage multiple des offres et demandes améliorés" />
     <MESSAGE value="Commentaires des fichiers javascript + effet de tremblement rajoutés avec la bibliothèque JQuery UI" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commentaires des fichiers javascript + effet de tremblement rajoutés avec la bibliothèque JQuery UI" />
+    <MESSAGE value="Ajout d'effet JQuery et petites modifications des formulaires" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ajout d'effet JQuery et petites modifications des formulaires" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/controllers/Login.php" />
@@ -456,24 +489,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/javascript/function/deleteOffer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="13" selection-start-line="13" selection-end-line="13" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/javascript/function/connexion.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/Model.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="53" column="42" selection-start-line="53" selection-start-column="42" selection-end-line="53" selection-end-column="42" />
         </state>
       </provider>
     </entry>
@@ -491,13 +510,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="31" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/models/OffreManager.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
@@ -511,13 +523,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/images/Vacances.png">
       <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/javascript/function/createOffer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="49" column="127" selection-start-line="49" selection-start-column="127" selection-end-line="49" selection-end-column="127" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/javascript/function/viewOffer.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -574,23 +579,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="255">
-            <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/javascript/function/register.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md" />
     <entry file="file://$PROJECT_DIR$/views/javascript/function/viewOffers.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
@@ -628,16 +617,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/javascript/formCreateOffer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="926">
-          <caret line="101" column="24" selection-start-line="101" selection-start-column="24" selection-end-line="101" selection-end-column="24" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="773">
@@ -645,13 +624,58 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/views/javascript/function/deleteOffer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="13" selection-start-line="13" selection-end-line="13" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/javascript/function/createOffer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="263">
+          <caret line="21" selection-start-line="21" selection-end-line="44" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/javascript/formCreateOffer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="18" column="45" lean-forward="true" selection-start-line="18" selection-start-column="45" selection-end-line="18" selection-end-column="45" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="31" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/Model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="14" column="106" selection-start-line="14" selection-start-column="100" selection-end-line="14" selection-end-column="106" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/views/javascript/formRegister.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="745">
+        <state relative-caret-position="-534">
           <caret line="53" column="77" selection-start-line="53" selection-start-column="77" selection-end-line="53" selection-end-column="77" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/javascript/function/register.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="11" column="40" selection-start-line="11" selection-start-column="40" selection-end-line="11" selection-end-column="40" />
         </state>
       </provider>
     </entry>
