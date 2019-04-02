@@ -12,4 +12,8 @@ Ou tout simplement, vous pouvez vous inscire dessus.
 
 Un modal apparait lorsque vous n'êtes pas connectés qui vous oblige à vous connecter.
 
-Il n'y qu'une seule page qui affiche les autres partis du site avec des appels en javascript.
+Il n'y qu'une seule page qui affiche les autres partis du site avec des appels Ajax.
+
+Il y a 2 bibliothèques utilisées: JQuery et JQuery UI
+
+Fait par Nicolas Rohrbach.
